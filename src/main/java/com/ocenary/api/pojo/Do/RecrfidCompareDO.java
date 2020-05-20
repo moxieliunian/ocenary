@@ -1,5 +1,6 @@
 package com.ocenary.api.pojo.Do;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,6 +12,7 @@ import java.util.Date;
 /**
  * @author Shi Meng
  * @version 1.0
+ * 粉底液-对比组数据
  **/
 @Entity
 @Table(name = "STG_JY_RECRFID_COMPARE")
@@ -19,6 +21,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 public class RecrfidCompareDO {
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
